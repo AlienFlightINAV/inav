@@ -32,27 +32,27 @@
 #define MPU_INT_EXTI            PC4
 #define USE_MPU_DATA_READY_SIGNAL
 
-#define MPU6500_CS_PIN          PC0
-#define MPU6500_SPI_BUS         BUS_SPI3
+//#define MPU6500_CS_PIN          PC0
+//#define MPU6500_SPI_BUS         BUS_SPI3
 
 #define MPU9250_CS_PIN          PC0
 #define MPU9250_SPI_BUS         BUS_SPI3
 
 #define ACC
-#define USE_ACC_MPU6500
-#define ACC_MPU6500_ALIGN       CW180_DEG
+//#define USE_ACC_MPU6500
+//#define ACC_MPU6500_ALIGN       CW180_DEG
 #define USE_ACC_MPU9250
 #define ACC_MPU9250_ALIGN       CW180_DEG
 
 #define GYRO
-#define USE_GYRO_MPU6500
-#define GYRO_MPU6500_ALIGN      CW180_DEG
+//#define USE_GYRO_MPU6500
+//#define GYRO_MPU6500_ALIGN      CW180_DEG
 #define USE_GYRO_MPU9250
 #define GYRO_MPU9250_ALIGN      CW180_DEG
 
 #define MAG
 #define USE_MAG_MPU9250
-#define MAG_MPU9250_ALIGN       CW180_DEG
+#define MAG_MPU9250_ALIGN       CW270_DEG_FLIP
 
 #define BARO
 #define USE_BARO_MS5611
@@ -127,7 +127,9 @@
 #define VBAT_ADC_CHANNEL                ADC_CHN_2
 #define CURRENT_METER_ADC_CHANNEL       ADC_CHN_1
 
-#define DEFAULT_FEATURES        (FEATURE_VBAT | FEATURE_BLACKBOX)
+#define DEFAULT_FEATURES        (FEATURE_VBAT | FEATURE_CURRENT_METER | FEATURE_OSD )
+
+#define CURRENT_METER_SCALE     250
 
 // Number of available PWM outputs
 #define MAX_PWM_OUTPUT_PORTS       6
